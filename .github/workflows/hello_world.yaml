@@ -1,0 +1,18 @@
+name : Hello Universe 
+on: #When will it trigger 
+  push: #on push it will appear
+    branches: #Which branch it will trigger 
+      - main # On Main branch it will trigger
+  workflow_dispatch:
+jobs: #Works to be done
+  build_and_test: #pipeline to be complete
+    runs-on: ubuntu-20.04 # Server to be run on
+  steps: # Steps go through
+    - name: Clone code #name of the steps 
+      uses: actions/checkout@v2 #What it does
+    - name: Compine java file  #name of steps
+      shell: bash #What shell to use
+      run : javac Main.java # What it does
+    - name : Rund the Java File #name of steps
+      shell: bash #What shell to use
+      run : java Main.java # What it does
