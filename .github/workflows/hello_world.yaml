@@ -8,11 +8,11 @@ jobs: #Works to be done
   build_and_test: #pipeline to be complete
     runs-on: ubuntu-20.04 # Server to be run on
   steps: # Steps go through
-    - name: Clone code #name of the steps 
-      uses: actions/checkout@v2 #What it does
-    - name: Compine java file  #name of steps
+    - name : Clone code #name of the steps 
+      uses : actions/checkout@v2 #What it does
+    - name : Compine java file  #name of steps
       shell: bash #What shell to use
-      run : javac Main.java # What it does
+      run  : javac Main.java # What it does
     - name : Rund the Java File #name of steps
       shell: bash #What shell to use
-      run : java Main.java # What it does
+      run  : java Main.java # What it doe
