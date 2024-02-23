@@ -1,5 +1,5 @@
 name: Hello Universe
-'on':
+on:
   push:
     branches:
       - main
@@ -7,12 +7,12 @@ name: Hello Universe
 jobs:
   build_and_test:
     runs-on: ubuntu-20.04
-  steps:
-    - name: Clone code
-      uses: actions/checkout@v2
-    - name: Compine java file
-      shell: bash
-      run: javac Main.java
-    - name: Rund the Java File he
-      shell: bash
-      run: java Main.java
+    steps:
+      - name: Clone code
+        uses: actions/checkout@v2
+      - name: Compile java file
+        shell: bash
+        run: javac Main.java
+      - name: Run the Java File
+        shell: bash
+        run: java Main
